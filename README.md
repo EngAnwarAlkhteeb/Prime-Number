@@ -1,10 +1,30 @@
-# Prime-Number
-Prime numbers are numbers that can only be cleanly divided by themselves and 1.
+# Prime Checker 🌟
 
-https://en.wikipedia.org/wiki/Prime_number
+A Python script to determine if a given number is prime or not.
 
-You need to write a function that checks whether if the number passed into it is a prime number or not.
+## 🚀 Usage
 
-e.g. 2 is a prime number because it's only divisible by 1 and 2.
+1. Run the Python script in a console or terminal.
+2. Enter a number when prompted.
+3. The program will reveal whether the number is prime or not.
 
-But 4 is not a prime number because you can divide it by 1, 2 or 4.
+## 💡 How it Works
+
+The script uses a basic algorithm to check for divisibility, iterating up to the entered number. If the number is not divisible by any number in this range, it's considered prime.
+
+## 🌐 Example
+
+```python
+def prime_checker(number):
+    is_prime = True
+    for i in range(2, number):
+        if number % i == 0:
+            is_prime = False
+    if is_prime:
+        print(f"{number} is a prime number.")
+    else:
+        print(f"{number} is not a prime number.")
+
+# Test the function with different numbers
+input_user = int(input("Enter a number: "))
+prime_checker(number=input_user)
